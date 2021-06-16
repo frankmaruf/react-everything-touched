@@ -1,0 +1,12 @@
+.items {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  background-color: rgb(229, 240, 253);
+  border: 2px solid rgb(198, 224, 248);
+  border-radius: 0.3rem;
+}
+.items h3 {
+  margin-right: auto;
+  background-color: rgb(229, 240, 253);
+}

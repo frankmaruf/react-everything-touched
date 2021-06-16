@@ -1,9 +1,9 @@
 import React from "react";
-import FetchData from "./components/UseEffect/FetchData";
+import CleanUpFunction from "./components/UseEffect/CleanUpFunction";
 function App() {
   return (
     <>
-      <FetchData />
+      <CleanUpFunction />
     </>
   );
 }

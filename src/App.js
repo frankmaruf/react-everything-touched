@@ -1,9 +1,9 @@
 import React from "react";
-import CleanUpFunction from "./components/UseEffect/CleanUpFunction";
+import UseReducer from "./UseReducer/UseReducer";
 function App() {
   return (
     <>
-      <CleanUpFunction />
+      <UseReducer />
     </>
   );
 }

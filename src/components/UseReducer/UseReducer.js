@@ -1,36 +1,17 @@
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import { data } from "../../data/data";
-// import { PeopleAdd } from "../UseReducer/Test/reducers/PeopleReducer";
-
-const PeopleAdd = (state, action) => {
-  switch (action.type) {
-    case "PERSON_ADD":
-      const newPeople = [...state.peoples, action.payload];
-      return {
-        peoples: newPeople,
-      };
-    case "REMOVE_PEOPLE":
-      const new_People = state.peoples.filter(
-        (person) => person.id !== action.payload
-      );
-      return {
-        ...state,
-        peoples: new_People,
-      };
-    default:
-      return state;
-  }
-};
+import { PeopleAdd } from "./Test/reducers/PeopleReducer";
 
 const UseReducer = () => {
-  const defaultState = {
-    peoples: data,
-  };
-  const [state, dispatch] = useReducer(PeopleAdd, defaultState);
+  // <<
+  // const defaultState = {
+  //   peoples: data,
+  // };
+  // it's same as state becz state must be an object so i destructure it
+  // const [state, dispatch] = useReducer(PeopleAdd, defaultState);
+  // >>
+  const [{ peoples }, dispatch] = useReducer(PeopleAdd, { peoples: data });
   const [name, setName] = useState("");
-  const handleDelete = (id) => {
-    const newPerson = data.filter();
-  };
   return (
     <div
       className="text-center"
@@ -43,7 +24,7 @@ const UseReducer = () => {
       }}
     >
       <h3 className="mt-3">People List</h3>
-      {state.peoples.map((person) => {
+      {peoples.map((person) => {
         const { id, name } = person;
         return (
           <div key={id}>

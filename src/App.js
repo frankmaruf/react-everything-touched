@@ -1,9 +1,9 @@
 import React from "react";
-import UseReducer from "./components/UseReducer/UseReducer";
+import ContextApi from "./components/ContextApi";
 function App() {
   return (
     <>
-      <UseReducer />
+      <ContextApi />
     </>
   );
 }

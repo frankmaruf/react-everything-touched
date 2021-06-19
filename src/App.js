@@ -1,9 +1,9 @@
 import React from "react";
-import CustomHooks from "./components/CustomHooks";
+import ReactRouter from "./components/react-router/ReactRouter";
 function App() {
   return (
     <>
-      <CustomHooks />
+      <ReactRouter />
     </>
   );
 }

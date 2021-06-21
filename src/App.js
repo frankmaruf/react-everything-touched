@@ -1,11 +1,12 @@
 import React from "react";
-import ReactRouter from "./components/react-router/ReactRouter";
+import Home from "./React Context";
+import "./SASS/App.scss";
+
 function App() {
   return (
     <>
-      <ReactRouter />
+      <Home />
     </>
   );
 }
-
 export default App;

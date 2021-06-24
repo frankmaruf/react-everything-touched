@@ -2,10 +2,10 @@ import React from "react";
 import { useContext } from "react";
 import { Button, Col } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { Article } from "./ArticleContext";
+import { ArticleContext } from "./Store";
 
 const ArticleList = () => {
-  const { article } = useContext(Article);
+  const { article } = useContext(ArticleContext);
   console.log(article);
   return (
     <>

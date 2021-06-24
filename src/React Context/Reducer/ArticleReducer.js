@@ -1,6 +1,6 @@
 import { ArticleConst } from "../constants/Article";
 
-export const AddArticle = (state, { type, payload }) => {
+export const ArticleReducer = (state, { type, payload }) => {
   switch (type) {
     case ArticleConst.ON_SUCCESS:
       return { ...state, article: payload, loading: false, error: false };
@@ -9,15 +9,7 @@ export const AddArticle = (state, { type, payload }) => {
     case ArticleConst.ADD_ARTICLE:
       return {
         ...state,
-        payload,
-      };
-    case ArticleConst.REMOVE_ARTICLE:
-      const new_People = state.peoples.filter(
-        (person) => person.id !== payload
-      );
-      return {
-        ...state,
-        peoples: new_People,
+        article: payload,
       };
     case ArticleConst.REST_ARTICLE:
       return {};
